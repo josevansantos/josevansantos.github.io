@@ -2,24 +2,29 @@
 <html>
 
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap" rel="stylesheet">
     <link rel="icon" href="rocket-solid.png" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>My Portfolio</title>
+    <title>About Me</title>
     <style>
         body {
             margin: 0;
             padding: 0;
-            background-color: #121214;
+            background-color: #1c1c1c;
             color: #FCFFF5;
-            font-family: Arial, sans-serif;
+            font-family: 'Roboto', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            width: 100vw;
+            box-sizing: border-box;
         }
-
+    
         .container {
             display: flex;
             flex-direction: column;
@@ -27,81 +32,104 @@
             justify-content: center;
             text-align: center;
             width: 100%;
-            max-width: 600px;
+            height: 66.67vh;
             margin: 0 auto;
         }
-
-        .profile,
-        .info,
-        .social-icons {
+    
+        .profile *,
+        .info > h1,
+        .info > h4 {
             width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
-
+    
         .profile img {
-            width: 150px;
-            height: 150px;
+            width: 9.375rem; /* 150px / 16 */
+            height: 9.375rem; /* 150px / 16 */
             border-radius: 50%;
-            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
         }
-
+    
         .info {
             text-align: left;
         }
-
+    
         .info h1 {
-            font-size: 36px;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            font-size: 2.5rem; /* 40px / 16 */
+            margin-bottom: 0px;
         }
-
+    
+        .info h4 {
+            font-size: 1.25rem; /* 20px / 16 */
+            margin-top: 0px;
+        }
+    
         .info p {
-            font-size: 18px;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-
+            font-size: 1rem; /* 16px / 16 */
+            margin-bottom: 1.25rem; /* 20px / 16 */
+            width: 100%;
+            max-width: 28.125rem; /* 400px / 16 */
+            text-align: justify;
+            margin: 0 auto;
         }
-
+    
         .social-icons {
+            margin-top: 1.5rem; /* 24px / 16 */
+            width: 100%;
             display: flex;
             justify-content: center;
             flex-direction: row;
+            align-items: center;
         }
-
+    
         .social-icons a {
-            display: inline-block;
-            margin: 0 10px;
+            text-decoration: none;
+            margin: 0 0.625rem; /* 10px / 16 */
             color: #ffffff;
-            font-size: 24px;
+            font-size: 2rem; /* 24px / 16 */
         }
-
+    
         .social-icons a:hover {
             color: #FFBC67;
         }
-
-        @media screen and (max-width: 600px) {
+    
+        @media only screen and (max-device-width: 37.5rem) { /* 600px / 16 */
             .container {
                 width: 100%;
-                padding: 0 20px;
+                padding: 0 1.25rem; /* 20px / 16 */
+                flex-direction: column;
             }
-
+    
             .profile img {
-                width: 100px;
-                height: 100px;
+                width: 18.75rem; /* 300px / 16 */
+                height: 18.75rem; /* 300px / 16 */
             }
-
+    
             .info h1 {
-                font-size: 24px;
+                font-size: 5rem; /* 32px / 16 */
             }
 
+            .info h4 {
+                font-size: 2.5rem; /* 40px / 16 */
+            }
+    
             .info p {
-                font-size: 16px;
+                font-size: 2rem; /* 24px / 16 */
+                margin-bottom: 1.25rem; /* 20px / 16 */
+                margin-top: 1.25rem; /* 20px / 16 */
+                white-space: wrap;
+                text-align: left;
             }
-
+    
             .social-icons a {
-                font-size: 20px;
+                margin-top: 1.5rem; /* 24px / 16 */
+                margin-left: 0.625rem; /* 10px / 16 */
+                margin-right: 0.625rem; /* 10px / 16 */
+                font-size: 4rem; /* 64px / 16 */
             }
         }
     </style>
@@ -114,8 +142,8 @@
         </div>
         <div class="info">
             <h1>Josevan Santos</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue. Sed
-                posuere consectetur est at lobortis.</p>
+            <h4>Software Engineer</h4>
+            <p>I'm a software engineer with a degree in business and an MBA in finance. My main technical stack is TypeScript/JavaScript, Node.js, React, and Python. For more information about my professional career and projects, visit my GitHub and LinkedIn.</p>
             <div class="social-icons">
                 <a href="https://github.com/josevansantos" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/josevansantos" target="_blank"><i class="fab fa-linkedin"></i></a>
