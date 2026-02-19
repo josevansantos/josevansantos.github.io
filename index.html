@@ -13,15 +13,14 @@
     <style>
         body {
             margin: 0;
-            padding: 0;
+            padding: 2rem 1rem;
             background-color: #1c1c1c;
             color: #FCFFF5;
             font-family: 'Roboto', sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            width: 100vw;
+            min-height: 100vh;
             box-sizing: border-box;
         }
     
@@ -32,104 +31,99 @@
             justify-content: center;
             text-align: center;
             width: 100%;
-            height: 66.67vh;
+            max-width: 50rem; /* 800px / 16 */
             margin: 0 auto;
         }
     
-        .profile *,
-        .info > h1,
-        .info > h4 {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+        .profile {
+            margin-bottom: 1.5rem;
         }
     
         .profile img {
             width: 9.375rem; /* 150px / 16 */
             height: 9.375rem; /* 150px / 16 */
             border-radius: 50%;
+            border: 3px solid #FFBC67;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
         }
     
         .info {
-            text-align: left;
+            width: 100%;
         }
     
         .info h1 {
             font-size: 2.5rem; /* 40px / 16 */
-            margin-bottom: 0px;
+            margin-bottom: 0.5rem;
+            word-wrap: break-word;
         }
     
         .info h4 {
             font-size: 1.25rem; /* 20px / 16 */
-            margin-top: 0px;
+            margin-top: 0;
+            margin-bottom: 1.5rem;
+            color: #FFBC67;
+            font-weight: 300;
         }
     
         .info p {
-            font-size: 1rem; /* 16px / 16 */
-            margin-bottom: 1.25rem; /* 20px / 16 */
+            font-size: 1.125rem; /* 18px / 16 */
+            line-height: 1.6;
+            margin-bottom: 2rem;
             width: 100%;
-            max-width: 28.125rem; /* 400px / 16 */
+            max-width: 40rem; /* 640px / 16 */
             text-align: justify;
             margin: 0 auto;
+            color: #d1d1d1;
         }
     
         .social-icons {
-            margin-top: 1.5rem; /* 24px / 16 */
+            margin-top: 1.5rem;
             width: 100%;
             display: flex;
             justify-content: center;
-            flex-direction: row;
-            align-items: center;
+            gap: 1.5rem;
         }
     
         .social-icons a {
             text-decoration: none;
-            margin: 0 0.625rem; /* 10px / 16 */
             color: #ffffff;
-            font-size: 2rem; /* 24px / 16 */
+            font-size: 2rem;
+            transition: transform 0.3s ease, color 0.3s ease;
         }
     
         .social-icons a:hover {
             color: #FFBC67;
+            transform: translateY(-5px);
         }
     
-        @media only screen and (max-device-width: 37.5rem) { /* 600px / 16 */
-            .container {
-                width: 100%;
-                padding: 0 1.25rem; /* 20px / 16 */
-                flex-direction: column;
-            }
-    
-            .profile img {
-                width: 18.75rem; /* 300px / 16 */
-                height: 18.75rem; /* 300px / 16 */
-            }
-    
+        @media (max-width: 48rem) { /* 768px / 16 */
             .info h1 {
-                font-size: 5rem; /* 32px / 16 */
+                font-size: 2.25rem;
             }
 
             .info h4 {
-                font-size: 2.5rem; /* 40px / 16 */
+                font-size: 1.125rem;
             }
     
             .info p {
-                font-size: 2rem; /* 24px / 16 */
-                margin-bottom: 1.25rem; /* 20px / 16 */
-                margin-top: 1.25rem; /* 20px / 16 */
-                white-space: wrap;
-                text-align: left;
+                font-size: 1rem;
+                text-align: center;
+                padding: 0 1rem;
             }
     
+            .profile img {
+                width: 8rem;
+                height: 8rem;
+            }
+        }
+
+        @media (max-width: 30rem) { /* 480px / 16 */
+            .info h1 {
+                font-size: 1.75rem;
+            }
+            
             .social-icons a {
-                margin-top: 1.5rem; /* 24px / 16 */
-                margin-left: 0.625rem; /* 10px / 16 */
-                margin-right: 0.625rem; /* 10px / 16 */
-                font-size: 4rem; /* 64px / 16 */
+                font-size: 1.75rem;
             }
         }
     </style>
@@ -143,7 +137,7 @@
         <div class="info">
             <h1>Josevan Santos</h1>
             <h4>Software Developer</h4>
-            <p>I'm a software developer with a degree in business and an MBA in finance. My main technical stack is TypeScript/JavaScript, Node.js, React, and Python. For more information about my professional career and projects, visit my GitHub and LinkedIn.</p>
+            <p>Results-driven Software Engineer with over 4 years of dedicated development experience, successfully leveraging a 9-year foundational career in Corporate Finance (2012–2021). I champion continuous code improvement, architecting scalable solutions within the Investor Relations (IR) sector utilizing Domain-Driven Design (DDD) and Layered Architectures (Clean, Hexagonal) via Node.js and TypeScript. My engineering output is directly enriched by my extensive corporate finance background, providing a distinct advantage in rapidly translating complex stakeholder demands into precise technical execution. To further elevate my analytical capabilities, I am currently pursuing a degree in Statistics, allowing me to apply advanced mathematical reasoning to drive highly optimized, data-informed product decisions. For more information about my professional career and projects, visit my GitHub and LinkedIn.</p>
             <div class="social-icons">
                 <a href="https://github.com/josevansantos" target="_blank"><i class="fab fa-github"></i></a>
                 <a href="https://www.linkedin.com/in/josevansantos" target="_blank"><i class="fab fa-linkedin"></i></a>
